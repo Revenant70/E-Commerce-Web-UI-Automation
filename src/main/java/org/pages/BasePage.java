@@ -12,6 +12,10 @@ public class BasePage {
     public static String username = "standard_user";
     public static String password = "secret_sauce";
 
+    public static String firstName = "Adam";
+    public static String lastName = "Smith";
+    public static String postalCode = "12345";
+
 
     public void setDriver(WebDriver driver) { BasePage.driver = driver; }
 
@@ -23,5 +27,7 @@ public class BasePage {
     }
 
     protected void click(By locator) { find(locator).click(); }
+
+    protected String getCurrentURl() { return driver.getCurrentUrl(); }
 
 }

@@ -5,6 +5,9 @@ import org.pages.BasePage;
 import org.pages.saucedemo.CartPage;
 import org.pages.saucedemo.LoginPage;
 import org.pages.saucedemo.ProductsPage;
+import org.pages.saucedemo.checkout.CheckoutCompletePage;
+import org.pages.saucedemo.checkout.CheckoutInformationPage;
+import org.pages.saucedemo.checkout.CheckoutOverviewPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +20,9 @@ public class BaseTest extends BasePage {
     protected LoginPage loginPage;
     protected ProductsPage productsPage;
     protected CartPage cartPage;
+    protected CheckoutInformationPage checkoutInformationPage;
+    protected CheckoutOverviewPage checkoutOverviewPage;
+    protected CheckoutCompletePage checkoutCompletePage;
     private String url = "https://www.saucedemo.com/";
 
     @BeforeClass
