@@ -14,7 +14,7 @@ public class SubmitPersonalFormDataPassTest extends BaseTest {
         productsPage.goToCartPage();
         CheckoutInformationPage checkoutInformationPage = cartPage.clickCheckoutCartButton();
         checkoutInformationPage.setCheckoutFormData(firstName, lastName, postalCode);
-        CheckoutOverviewPage checkoutOverviewPage = checkoutInformationPage.clickCheckoutButton();
+        CheckoutOverviewPage checkoutOverviewPage = checkoutInformationPage.clickCheckoutContinueButton();
         Assert.assertTrue(checkoutOverviewPage.isCheckoutTitlePresent());
     }
 

@@ -10,7 +10,7 @@ public class CheckoutInformationPage extends BasePage {
 
     private final By continueCheckoutButton = By.id("continue");
 
-    private final By formErrorPopup = By.className("error-button");
+    private final By formErrorPopup = By.cssSelector("#checkout_info_container h3");
 
     private final By firstNameField = By.id("first-name");
     private final By lastNameField = By.id("last-name");
@@ -44,7 +44,7 @@ public class CheckoutInformationPage extends BasePage {
         setPostalCodeFieldValue(postalCode);
     }
 
-    public CheckoutOverviewPage clickCheckoutButton() {
+    public CheckoutOverviewPage clickCheckoutContinueButton() {
         click(continueCheckoutButton);
         return new CheckoutOverviewPage();
     }
