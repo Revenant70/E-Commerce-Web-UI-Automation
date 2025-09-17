@@ -1,18 +1,19 @@
-package saucedemo.tests.checkout;
+package saucedemo.tests.cart;
 
 import org.pages.saucedemo.CartPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import saucedemo.BaseTest;
 
-public class AddMultipleProductsToCartTest extends BaseTest {
+
+public class AddSingleProductToCartTest extends BaseTest {
 
     @Test
-    public void addMultipleProductsToCartTest() {
+    public void addToCartSingle() {
         loginPage.loginToApplication(username, password);
         productsPage.addProductToCart("add-to-cart-sauce-labs-backpack");
-        productsPage.addProductToCart("add-to-cart-sauce-labs-bike-light");
         CartPage cartPage = productsPage.goToCartPage();
-        Assert.assertEquals(cartPage.doesCartHaveMultipleProducts(), 2, "Cart item count mismatch!");
+        Assert.assertTrue(cartPage.isBackpackRemoveButtonPresent("remove-sauce-labs-backpack"));
     }
+
 }
